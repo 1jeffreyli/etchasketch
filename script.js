@@ -28,4 +28,10 @@ function addHover () {
     grid.appendChild(hoverCell);
 }
 
-// add event listener for when the mouse hovers over the div
+// add event listener for when the mouse hovers over the div using onmouseenter
+
+// remove event listener when the mouse leaves the div using onmouseleave
+
+// to do 3/10/22
+// check if :hover effect works
+// check which element to target for the eventListener to, grid or cell div
