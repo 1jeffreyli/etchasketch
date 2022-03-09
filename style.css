@@ -4,16 +4,16 @@
     justify-content: center;
 }
 
-.grid {
+.grid { 
     margin: 0;
     width: 1024px;
-    height: 1024px;
+    height: auto;
     border: 1px solid black;
 }
 
 .cell {
     border: 1px solid black;
-    max-width: 4px;
-    max-height: 4px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
 }

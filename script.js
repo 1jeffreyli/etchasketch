@@ -7,3 +7,12 @@ function addClass () {
     cell.classList.add("cell");
     grid.appendChild(cell);
 }
+
+// create a function that loops through 16x16 times calling addClass
+function draw() {
+    for (let i = 0; i < 256; i++) {
+        addClass();
+    }
+}
+
+draw();
