@@ -1,13 +1,19 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .grid {
     margin: 0;
-    width: 640px;
-    height: 20px;
+    width: 1024px;
+    height: 1024px;
     border: 1px solid black;
 }
 
 .cell {
     border: 1px solid black;
-    min-width: 10px;
-    min-height: 10px;
+    max-width: 4px;
+    max-height: 4px;
     display: inline-block;
 }
