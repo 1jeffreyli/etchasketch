@@ -1,3 +1,22 @@
-.containerRow, .square {
-    border: 1px solid blue;
+#container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    padding: 5px;
+}
+
+#container>div {
+    height: 25px;
+}
+
+.square {
+    border: 1px solid darkblue;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
 }
