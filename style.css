@@ -1,3 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 25px;
+}
+
 #container {
     display: flex;
     justify-content: center;
