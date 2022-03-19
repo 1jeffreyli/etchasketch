@@ -29,22 +29,23 @@ function makeRed () {
 }
 
 
-const button = document.querySelector(".reset");
+const button = document.getElementById("reset");
 
 // a function that clears the current grid
 function clear() {
-    let cells = document.querySelectorAll("square");
-    cells.forEach(cell => {
-        container.removeChild(cell);
-    });
+    // let cells = document.querySelectorAll("square");
+    // cells.forEach(cell => {
+    //     container.removeChild(cell);
+    // });
+    newGrid;
 }
  
 
 // a function that prompts for a size input and creates a new grid
-function newGrid () {
+let newGrid = function () {
     let newSize = prompt("How many squares do you want?");
     draw(newSize);
 }
 
 // add click eventListener
-button.addEventListener("onclick", clear(), newGrid());
+button.addEventListener("click", newGrid);
