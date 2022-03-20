@@ -41,7 +41,16 @@ function clearGrid() {
 let newGrid = function () {
     clearGrid();
     let newSize = prompt("How many squares do you want?");
+    if (newSize > 100) {
+        let wrongSize = prompt("Please enter a number less than 100.");
+        if (wrongSize <= 100) {
+            draw(wrongSize);
+        } else {
+            wrongSize;
+        }
+    } else {
     draw(newSize);
+    }
 }
 
 // add click eventListener
