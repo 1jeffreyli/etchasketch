@@ -6,10 +6,10 @@
     "header header"
     "nav nav"
     "main main"
-    "main main"
-    "main main"
-    "main main"
-    "main main"
+    /* "main main" */
+    /* "main main" */
+    /* "main main" */
+    /* "main main" */
     "footer footer";
     text-align: center;
     margin: 0 auto;
@@ -30,9 +30,30 @@ nav {
     grid-area: nav;
 }
 
-main {
+main{
     grid-area: main;
     display: grid;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), minmax(10px, auto));
+    grid-gap: 1em;
+    grid-auto-rows: minmax(10px, auto);
+    max-height: 960px;
+    margin: 0 auto;
+}
+
+.cell {
+    padding: 1em;
+    border: 1px solid maroon;
+    text-align: center;
 }
 
 footer {
