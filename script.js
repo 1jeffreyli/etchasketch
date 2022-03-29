@@ -1,26 +1,20 @@
-const container = document.querySelector("#container");
+const container = document.getElementById("container");
 
-// a function that takes a size parameter and draws axa size grid by creating the row
-// then fills the rows with x columns
-function draw(size) {
-    for (let i = 0; i < size; i++) {
-        const row = container.appendChild(document.createElement("div"));
-        for (let j = 0; j < size; j++) {
-            const cell = document.createElement("div");
-            cell.className = "square";
-            row.appendChild(cell);
-        }
+function draw(rows, cols) {
+    container.style.setProperty("--grid-rows", rows);
+    container.style.setProperty("--grid-cols", cols);
+    for (let i = 0; i < (rows * cols); i++) {
+        let cell = document.createElement("div");
+        // cell.innerText = (i + 1);
+        container.appendChild(cell).className = "cell";
     }
-    // call makeRed so that the eventListener is added to each .square div
     makeRed();
 }
 
-draw(16);
+draw(16, 16);
 
-// a function that changes the background color of the div being hovered over, using 
-// the mouseover event, NOT onmouseover
 function makeRed () {
-    let items = document.querySelectorAll(".square");
+    let items = document.querySelectorAll(".cell");
     items.forEach(item => {
         item.addEventListener("mouseover", () => {
             item.style.backgroundColor = "red";
@@ -28,30 +22,25 @@ function makeRed () {
     });
 }
 
-
 const button = document.getElementById("reset");
 
-// a function that clears the current grid
 function clearGrid() {
     container.innerHTML = "";
 }
- 
 
-// a function that prompts for a size input and creates a new grid
 let newGrid = function () {
     clearGrid();
     let newSize = prompt("How many squares do you want?");
-    if (newSize > 100) {
-        let wrongSize = prompt("Please enter a number less than 100.");
-        if (wrongSize <= 100) {
-            draw(wrongSize);
+    if (newSize > 100 || newSize < 1) {
+        let wrongSize = prompt("Please enter a number between 1 and 100.");
+        if (1 <= wrongSize <= 100) {
+            draw(wrongSize, wrongSize);
         } else {
             wrongSize;
         }
     } else {
-    draw(newSize);
+        draw(newSize, newSize);
     }
 }
 
-// add click eventListener
 button.addEventListener("click", newGrid);
