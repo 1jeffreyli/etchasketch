@@ -14,13 +14,19 @@
 }
 
 .wrapper > *{
-    background-color: skyblue;
+    background-color: grey;
     padding: 10px;
 }
 
 header {
     grid-area: header;
     border-radius: 25px;
+    margin: 0 auto;
+}
+
+header > h1{
+    padding: 25px;
+    color: white;
 }
 
 nav { 
@@ -29,6 +35,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+nav > button {
+    font-size: 18px;
 }
 
 main{
@@ -54,7 +64,7 @@ main{
 }
 
 .cell {
-    border: 1px solid maroon;
+    border: 1px solid white;
     text-align: center;
 }
 
@@ -64,4 +74,8 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+}
+
+footer > p{
+    color: white;
 }

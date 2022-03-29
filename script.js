@@ -19,7 +19,7 @@ function makeRed () {
     let items = document.querySelectorAll(".cell");
     items.forEach(item => {
         item.addEventListener("mouseover", () => {
-            item.style.backgroundColor = "red";
+            item.style.backgroundColor = "blue";
         });
     });
 }
