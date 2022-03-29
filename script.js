@@ -1,5 +1,6 @@
 const container = document.getElementById("container");
 
+// a function that draws a grid with two inputs, rows and columns desired
 function draw(rows, cols) {
     container.style.setProperty("--grid-rows", rows);
     container.style.setProperty("--grid-cols", cols);
@@ -13,6 +14,7 @@ function draw(rows, cols) {
 
 draw(16, 16);
 
+// a function that turns the element being hovered on red
 function makeRed () {
     let items = document.querySelectorAll(".cell");
     items.forEach(item => {
@@ -24,10 +26,12 @@ function makeRed () {
 
 const button = document.getElementById("reset");
 
+// remove the contents of the grid
 function clearGrid() {
     container.innerHTML = "";
 }
 
+// a function that clears the grid and asks for new dimensions
 let newGrid = function () {
     clearGrid();
     let newSize = prompt("How many squares do you want?");
