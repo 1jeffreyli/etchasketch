@@ -9,20 +9,32 @@ function draw(rows, cols) {
         // cell.innerText = (i + 1);
         container.appendChild(cell).className = "cell";
     }
-    makeRed();
+    // makeBlue();
+    randomColor();
 }
 
 draw(16, 16);
 
-// a function that turns the element being hovered on red
-function makeRed () {
+
+// a function that turns the element being hovered over a random color
+function randomColor () {
     let items = document.querySelectorAll(".cell");
     items.forEach(item => {
         item.addEventListener("mouseover", () => {
-            item.style.backgroundColor = "blue";
+            item.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`;
         });
     });
 }
+
+// a function that turns the element being hovered on blue
+// function makeBlue () {
+//     let items = document.querySelectorAll(".cell");
+//     items.forEach(item => {
+//         item.addEventListener("mouseover", () => {
+//             item.style.backgroundColor = "blue";
+//         });
+//     });
+// }
 
 const button = document.getElementById("reset");
 
